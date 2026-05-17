@@ -74,7 +74,7 @@ dots.forEach((dot, i) => {
 
 if (slides.length > 0) {
     updateDots();
-    setInterval(showNextSlide, 3000);
+    setInterval(showNextSlide, 5000);
 }
 
 // RECIPE FILTER BUTTONS
