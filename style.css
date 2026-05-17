@@ -702,6 +702,7 @@ footer {
    object-fit: cover;
    border: 1px solid #031d02;
    flex-shrink: 0;
+   border-radius: 4px;
 }
 
 /* Meal text styling */
