@@ -53,6 +53,8 @@ nav {
     align-items: center;
     padding: 10px 0;
     box-sizing: border-box;
+    position: relative; 
+    z-index: 999;
 }
 
 .topnav a {
