@@ -191,9 +191,11 @@ nav {
         right: 0;
         background: #a1baaa;
         flex-direction: column;
-        width: 200px;
-        text-align: right;
+        width: 100%;
+        text-align: center; 
         padding: 1rem;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(3, 29, 2, 0.15);
     }
 
     #nav-right.active {
@@ -202,6 +204,13 @@ nav {
 
     .hamburger {
         display: flex;
+    }
+
+    .search-container {
+        margin: 12px auto; 
+        width: 80%; 
+        max-width: 300px;
+        background-color: #f8eeef;
     }
 }
 
@@ -434,6 +443,7 @@ footer {
     background-color: #f1d0d9;
     cursor: pointer;
     font-size: 14px;
+    color: #031d02;
 }
 
 /* Hover effect for filter buttons */
