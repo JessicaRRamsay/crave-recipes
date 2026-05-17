@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crave</title>
+    <link rel="icon" type="image/png" href="images/crave-favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar with links and search -->
+    <nav class="topnav" id="myTopnav">
+        <a href="index.html" class="logo-link">Crave</a>
+        <div id="nav-right">
+            <a href="mealplanner.html">Meal Planner</a>
+            <a href="recipeindex.html">Recipes</a>
+
+            <!-- Search bar for finding recipes -->
+            <div class="search-container">
+                <input type="text" id="recipeSearch" onkeyup="searchRecipes()" placeholder="Search recipes...">
+                <button type="button" aria-label="Magnifying glass search icon"><i class="fa fa-search"></i></button>
+                <div id="search-results">
+                    <ul id="recipeMenu">
+                        <li><a href="recipe.html?id=cookies">Chocolate Chip Peanut Butter Cookies</a></li>
+                        <li><a href="recipe.html?id=crepe">Soft Crepes</a></li>
+                        <li><a href="recipe.html?id=doughnuts">Fluffy Banana Airfryer Doughnut Holes</a></li>
+                        <li><a href="recipe.html?id=flatbread">Garlic Butter Flatbread</a></li>
+                        <li><a href="recipe.html?id=onion-rings">Crispy Onion Rings</a></li>
+                        <li><a href="recipe.html?id=potato-salad">Creamy Potato Salad</a></li>
+                        <li><a href="recipe.html?id=scone">Fluffy Scones</a></li>
+                        <li><a href="recipe.html?id=sushi">Teriyaki Sushi</a></li>
+                        <li><a href="recipe.html?id=bulgogi">Beef Bulgogi</a></li>
+                        <li><a href="recipe.html?id=chicken">Honey Soy Chicken</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <div class="body-wrap">
+        <!-- Recipe container -->
+        <main class="recipe-container">
+            <header class="recipe-header">
+                <img id="recipe-img" src="images/placeholder.jpg" alt="Loading recipe..." class="recipe-circle-img">    
+            </header>
+
+            <div class="recipe-content-box">
+                <!-- Recipe title and stats -->
+                <section class="recipe-intro">
+                    <h1 id="recipe-name">Loading recipe...</h1>
+                    <div id="recipe-stats-container" class="recipe-stats"></div>
+                </section>
+
+                <!-- Ingredients and method -->
+                <div class="recipe-grid-layout">
+                    <section class="ingredients-col">
+                        <h2>Ingredients</h2>
+                        <ul id="ingredients"></ul>
+                    </section>
+
+                    <section class="method-col">
+                        <h2>Method</h2>
+                        <ol id="method"></ol>
+                    </section>
+                </div>
+
+                <!-- Tips -->
+                <div class="recipe-tips">
+                    <h2>Tips</h2>
+                    <p id="recipe-tips-text"></p>
+                </div>
+
+                <!-- Source -->
+                <div class="recipe-source" id="recipeSourceSection">
+                    <p>Recipe adapted from: <a href="https://example.com" id="recipeSourceLink" target="_blank" rel="noopener noreferrer">Original Publisher</a></p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer with social media links -->
+    <footer>
+        <span class="footer-logo">Crave</span>
+        <div class="footer-links">
+            <a href="https://facebook.com" class="circle"><i class="fa fa-facebook"></i></a>
+            <a href="https://instagram.com" class="circle"><i class="fa fa-instagram"></i></a>
+            <a href="https://pinterest.com" class="circle"><i class="fa fa-pinterest"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

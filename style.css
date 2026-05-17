@@ -1,0 +1,726 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Great+Vibes&display=swap');
+
+/* Main page styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f8eeef;
+    font-family: 'Carlito', sans-serif;
+    color: #031d02;
+    
+}
+
+.body-wrap {
+    margin: 25px;
+}
+
+/* Makes the scroll to top button more smooth */
+html {scroll-behavior: smooth;}
+
+/* TEXT */
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    color: #031d02;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* NAVBAR */
+/* Styling and positioning for the nav bar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+.topnav {
+    background-color: #a1baaa;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.topnav a {
+    display: block;
+    color: #031d02;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+/* Hover effect for navbar links */
+.topnav a:hover {
+    background-color: #f1d0d9;
+    color: #031d02;
+}
+
+/* Logo styling */
+.topnav a.logo-link {
+    font-size: 30px;
+    font-family: Great Vibes;
+    margin-left: 25px;
+    padding-bottom: 5px;
+}
+
+/* SEARCH BAR */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f8eeef;
+    border: 1px solid #031d02;
+    border-radius: 20px;
+    padding: 4px 4px 4px 12px;
+    margin: auto 16px;
+}
+
+.search-container input {
+    padding: 6px 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 180px;
+    background-color: transparent;
+    color: #031d02;
+}
+
+/* Placeholder text colour */
+.search-container input::placeholder {
+    color: #a1baaa;
+}
+
+/* Search icon button */
+.search-container button {
+    padding: 8px 10px;
+    border-radius: 50%;
+    border: 1px solid #031d02;
+    background-color: #f1d0d9;
+    color: #031d02;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container button:hover {
+    background-color: #e2a1b4;
+}
+
+/* Right side navigation links */
+#nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Results from recipe search */
+#search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f8eeef;
+    border: 1px solid #031d02;
+    padding: 5px;
+    border-radius: 10px;
+    width: 250px;
+    z-index: 999;
+}
+
+#recipeMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#recipeMenu li a {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #031d02;
+    display: block;
+}
+
+#recipeMenu li a:hover {
+    background-color: #f1d0d9;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+    margin-right: 16px;
+    padding: 8px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background: #031d02;
+    border-radius: 2px;
+}
+
+/* Responsive navbar for smaller screens */
+@media (max-width: 768px) {
+    #nav-right {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #a1baaa;
+        flex-direction: column;
+        width: 200px;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    #nav-right.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+/* LAYOUT */
+/* Grid layout */
+.row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    padding: 16px;
+}
+
+
+/* IMAGES */
+.home-img {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #031d02;
+    display: block;
+    margin: 0 auto;
+}
+
+/* FOOTER */
+/* layout, spacing, styling */
+footer {
+    background-color: #a1baaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    margin-top: 40px;
+}
+
+/* Footer logo */
+.footer-logo {
+    font-size: 30px;
+    color: #031d02;
+    font-family: Great Vibes;
+}
+
+/* Social media circles layout */
+.footer-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Social media circles */
+.circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #f1d0d9;
+    border: 2px solid #031d02;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #031d02;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hover effect for socials */
+.circle:hover {
+    background-color: #e2a1b4;
+}
+
+/* CAROUSEL */
+.slideshow-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Hidden slides */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    pointer-events: none;
+}
+
+/* Active slide */
+.slide-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+    background-color: #f1d0d9;
+    pointer-events: auto;
+}
+
+/* Progression dots for slideshow */
+.slide-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+    gap: 10px;
+}
+
+/* Styling for slideshow dots */
+.dot, .dot-active {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    border: 1.5px solid #031d02;
+}
+
+.dot {
+    background-color: #f1d0d9;
+}
+
+/* Active slideshow dot */
+.dot-active {
+    background-color: #e2a1b4;
+}
+
+/* Slideshow images */
+.slide-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slideshow-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Recipe grid layout */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+/* RECIPE CARD */
+.recipe-card {
+    border: 1px solid #031d02;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #d0ddd4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Recipe card image */
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text content inside recipe cards */
+.recipe-info {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.recipe-info h2 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.recipe-info p {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+}
+
+/* Recipe card button styling */
+.recipe-info a {
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid #031d02;
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #f1d0d9;
+    color: #031d02;
+    margin-top: auto; 
+    align-self: flex-start;
+}
+
+/* Hover effect for recipe links */
+.recipe-info a:hover {
+    background-color: #e2a1b4;
+}
+
+/* FILTER BUTTONS */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.filter-btn {
+    padding: 6px 16px;
+    border: 1px solid #031d02;
+    border-radius: 20px;
+    background-color: #f1d0d9;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Hover effect for filter buttons */
+.filter-btn:hover {
+    background-color: #e2a1b4;
+}
+
+/* Highlighting the active filter button */
+.filter-btn.active {
+    background-color: #e2a1b4;
+    font-weight: bold;
+    border: 2px solid #031d02;
+}
+
+/* Link to quickly scroll back to the top */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #031d02;
+}
+
+/* Responsive recipe grid for smaller screens */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RECIPE PAGE */
+.recipe-container {
+    max-width: 800px;
+    margin: 60px auto; 
+    position: relative;
+    font-family: 'Carlito', sans-serif;
+}
+
+/* Recipe image layout */
+.recipe-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -100px;
+    position: relative;
+    z-index: 10; 
+}
+
+/* Recipe image styling */
+.recipe-circle-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #031d02; 
+    object-fit: cover; 
+    background-color: white;
+}
+
+/* Main recipe content box */
+.recipe-content-box {
+    background-color: #d0ddd4;
+    border: 2px solid #031d02;
+    border-radius: 15px;
+    padding: 120px 40px 40px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(3, 29, 2, 0.3);
+}
+
+/* Layout for recipe information tags */
+.recipe-stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+/* Individual recipe stat tags */
+.stat-tag {
+    background-color: #f1d0d9;
+    border: 1px solid #031d02;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #031d02;
+    font-family: 'Carlito', sans-serif;
+}
+
+/* INGREDIENTS AND METHOD */
+/* Grid layout for ingredients and method sections */
+.recipe-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    text-align: left;
+    margin-top: 20px;
+    border-top: 1px solid #031d02;
+    padding-top: 30px;
+}
+
+/* Ingredients column styling */
+.ingredients-col {
+    border-right: 1px solid #031d02;
+    padding-right: 30px;
+}
+
+/* Ingredients list styling */
+.ingredients-col ul {
+    list-style: square; 
+    padding-left: 20px;
+    margin: 0;
+}
+
+.ingredients-col li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+/* Method list styling */
+.method-col ol {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.method-col li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Styling for recipe tips section */
+.recipe-tips {
+    margin-top: 35px;
+    padding: 20px 25px;
+    background-color: #f8eeef; 
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid #031d02;
+}
+
+/* Responsive recipe page layout */
+@media (max-width: 600px) {
+    .recipe-grid-layout {
+        grid-template-columns: 1fr;
+    }
+    .ingredients-col {
+        border-right: none;
+        border-bottom: 1px solid #031d02;
+        padding-bottom: 20px;
+        padding-right: 0;
+    }
+}
+
+/* Link for adapted recipes */
+.recipe-source {
+    margin-top: 35px;
+    border-top: 1px solid #031d02;
+    padding-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Carlito', sans-serif;
+}
+
+.recipe-source p {
+    margin: 0;
+    color: #031d02;
+}
+
+/* Source website link */
+.recipe-source a {
+    color: #031d02;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.recipe-source a:hover {
+    color: #a1baaa;
+}
+
+/* MEAL PLANNER */
+/* Main meal planner page layout */
+.planner-container {
+   margin-top: 30px;
+   max-width: 1000px;
+   margin: 30px auto;
+}
+
+/* Day section */
+.day-section {
+   margin-bottom: 30px;
+   border: 1px solid #031d02;
+   border-radius: 4px;
+   overflow: hidden;
+   background-color: #f8eeef;
+}
+
+/* Day heading styling */
+.day-header {
+   background-color: #d0ddd4;
+   border-bottom: 1px solid #031d02;
+}
+
+/* Meal item */
+.meal-item {
+   display: flex;
+   align-items: center;
+   padding: 15px;
+   gap: 15px;
+   border-right: 1px solid #031d02;
+}
+
+/* Meal category headings */
+.meal-headers {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   text-align: center;
+   font-weight: bold;
+   margin-bottom: 10px;
+   font-family: Carlito;
+}
+
+/* Meal links */
+.meal-link {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   text-decoration: none;
+   color: inherit;
+   width: 100%;
+   transition: background-color 0.2s ease;
+}
+
+/* Day title styling */
+.day-header h2 {
+   margin: 0;
+   padding: 12px 20px;
+   font-size: 22px;
+}
+
+/* Grid layout for meals */
+.meals-grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Removes border from right meal item to make the line a good width */
+.meal-item:last-child {
+   border-right: none;
+}
+
+/* Meal images */
+.meal-item img {
+   width: 85px;
+   height: 85px;
+   object-fit: cover;
+   border: 1px solid #031d02;
+   flex-shrink: 0;
+}
+
+/* Meal text styling */
+.meal-text {
+   font-size: 15px;
+   line-height: 1.4;
+   font-family: Carlito;
+}
+
+/* Intro paragraph on meal planner page */
+.planner-container p {
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 850px;
+}
+
+/* Responsive meal planner for smaller screens */
+@media (max-width: 768px) {
+   .meals-grid, .meal-headers {
+       grid-template-columns: 1fr;
+   }
+   .meal-headers {
+       display: none;
+   }
+   .meal-item {
+       border-right: none;
+       border-bottom: 1px solid #031d02;
+   }
+   .meal-item:last-child {
+       border-bottom: none;
+   }
+}
