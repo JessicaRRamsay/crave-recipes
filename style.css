@@ -41,7 +41,7 @@ h2 {
 nav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     padding: 8px 0;
     box-sizing: border-box;
 }
@@ -54,7 +54,7 @@ nav {
     padding: 10px 0;
     box-sizing: border-box;
     position: relative; 
-    z-index: 999;
+    z-index: 1001;
 }
 
 .topnav a {
