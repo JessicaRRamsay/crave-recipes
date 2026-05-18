@@ -38,7 +38,7 @@ h2 {
 
 /* NAVBAR */
 /* Styling and positioning for the nav bar */
-nav {
+#myTopnav, nav#myTopnav {
     position: sticky;
     top: 0;
     z-index: 1000;
