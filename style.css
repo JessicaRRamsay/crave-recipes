@@ -38,7 +38,7 @@ h2 {
 
 /* NAVBAR */
 /* Styling and positioning for the nav bar */
-#myTopnav, nav#myTopnav {
+#my-top-nav, nav#my-top-nav {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -149,20 +149,20 @@ h2 {
     z-index: 999;
 }
 
-#recipeMenu {
+#recipe-menu {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#recipeMenu li a {
+#recipe-menu li a {
     padding: 8px 12px;
     text-decoration: none;
     color: #031d02;
     display: block;
 }
 
-#recipeMenu li a:hover {
+#recipe-menu li a:hover {
     background-color: #f1d0d9;
 }
 
