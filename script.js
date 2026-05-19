@@ -1,9 +1,9 @@
 // SEARCH RECIPES
 function searchRecipes() {
-    const input = document.getElementById("recipeSearch");
+    const input = document.getElementById("recipe-search");
     const filter = input.value.toUpperCase();
     const resultsBox = document.getElementById("search-results");
-    const ul = document.getElementById("recipeMenu");
+    const ul = document.getElementById("recipe-menu");
     const items = ul.getElementsByTagName("li");
 
     // show/hide dropdown
@@ -82,29 +82,24 @@ function filterRecipes(category) {
     const cards = document.querySelectorAll(".recipe-card");
     const buttons = document.querySelectorAll(".filter-btn");
 
-    // active button state
-    buttons.forEach(btn => btn.classList.remove("active"));
+    buttons.forEach(btn => {
+        btn.classList.remove("active");
+        
+        // makes buttons active
+        if (btn.getAttribute('onclick').includes(`'${category}'`)) {
+            btn.classList.add("active");
+        }
+    });
 
-    const clickedBtn = Array.from(buttons).find(btn =>
-        btn.getAttribute("onclick")?.includes(category)
-    );
-
-    if (clickedBtn) {
-        clickedBtn.classList.add("active");
-    }
-
-    // show/hide cards
+    // Show or hide the recipe cards
     cards.forEach(card => {
-        const categories = card.dataset.category
-            ? card.dataset.category.split(" ")
-            : [];
-
+        const categories = card.dataset.category ? card.dataset.category.split(" ") : [];
         const show = category === "all" || categories.includes(category);
         card.style.display = show ? "block" : "none";
     });
 }
 
-// RECIPE DATA //
+// RECIPE DATA 
 const recipes = {
     "cookies": {
         title: "Chocolate Chip Peanut Butter Cookies",
@@ -432,9 +427,9 @@ function loadRecipe() {
     document.getElementById("recipe-img").src = recipe.img;
     document.getElementById("recipe-img").alt = recipe.alt;
 
-    document.getElementById("recipeSourceLink").href = recipe.sourceUrl;
-    document.getElementById("recipeSourceLink").textContent = recipe.sourceName;
-    document.getElementById("recipeSourceSection").style.display = "block";
+    document.getElementById("recipe-source-link").href = recipe.sourceUrl;
+    document.getElementById("recipe-source-link").textContent = recipe.sourceName;
+    document.getElementById("recipe-source-section").style.display = "block";
 
     // stats
     let statsHTML = `<span class="stat-tag">Total Time: ${recipe.totalTime}</span>`;
