@@ -3,7 +3,6 @@
 
 /* Main page styling */
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
     background-color: #f8eeef;
@@ -245,10 +244,6 @@ h2 {
 /* FOOTER */
 /* layout, spacing, styling */
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: #a1baaa;
     display: flex;
     justify-content: space-between;
